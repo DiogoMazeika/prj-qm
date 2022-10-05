@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="script.js"></script>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width"> -->
+    <meta name="viewport" content="height=device-height">
+    <title>Início</title>
+
+    <style>
+        html,
+        body,
+        #main-div {
+            height: 99%;
+            width: 99%;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        #elemento-div {
+            height: 40%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #info {
+            height: 100%;
+            width: 75%;
+            box-shadow: #101010d4 5px 5px 5px 0px;
+        }
+
+        #info-ttl {
+            height: 15%;
+            width: 100%;
+            background-color: #00000038;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #info-conteudo {
+            height: 85%;
+            width: 100%;
+        }
+
+        #tabela {
+            height: 60%;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .linha {
+            height: 100%;
+            width: 6%;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .elemento {
+            height: 13%;
+            margin-top: 3px;
+            margin-right: 3px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .n-metal {
+            background-color: #a1d344;
+        }
+
+        .alcalino {
+            background-color: #f1b200;
+        }
+
+        .alcalino-trr {
+            background-color: #eada00;
+        }
+
+        .metal-trans {
+            background-color: #eb8e8e;
+        }
+
+        .semimetal {
+            background-color: #4db6ac;
+        }
+
+        .outro-metal {
+            background-color: #a2c7d3;
+        }
+
+        .halogenio {
+            background-color: #70cbeb;
+        }
+
+        .gas-nobre {
+            background-color: #3d9ee3;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main-div">
+        <div id="elemento-div" class="flex">
+            <div id="info" class="hidden">
+                <div id="info-ttl" class="flex"></div>
+                <div id="info-conteudo" class="flex"></div>
+            </div>
+        </div>
+
+        <div id="tabela" class="flex">
+            <div class="linha flex">
+                <div nrAtomico="1" class="elemento n-metal flex ">H</div>
+                <div nrAtomico="3" class="elemento alcalino flex">Li</div>
+                <div nrAtomico="11" class="elemento alcalino flex">Na</div>
+                <div nrAtomico="19" class="elemento alcalino flex">K</div>
+                <div nrAtomico="37" class="elemento alcalino flex">Rb</div>
+                <div nrAtomico="55" class="elemento alcalino flex">Cs</div>
+                <div nrAtomico="87" class="elemento alcalino flex">Fr</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="4" class="elemento alcalino-trr flex">Be</div>
+                <div nrAtomico="12" class="elemento alcalino-trr flex">Mg</div>
+                <div nrAtomico="20" class="elemento alcalino-trr flex">Ca</div>
+                <div nrAtomico="38" class="elemento alcalino-trr flex">Sr</div>
+                <div nrAtomico="56" class="elemento alcalino-trr flex">Ba</div>
+                <div nrAtomico="88" class="elemento alcalino-trr flex">Ra</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="21" class="elemento metal-trans flex">Sc</div>
+                <div nrAtomico="39" class="elemento metal-trans flex">Y</div>
+                <div class="elemento metal-trans hidden"></div>
+                <div class="elemento metal-trans hidden"></div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="22" class="elemento metal-trans flex">Ti</div>
+                <div nrAtomico="40" class="elemento metal-trans flex">Zr</div>
+                <div nrAtomico="72" class="elemento metal-trans flex">Hf</div>
+                <div nrAtomico="104" class="elemento metal-trans flex">Rf</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="23" class="elemento metal-trans flex">V</div>
+                <div nrAtomico="41" class="elemento metal-trans flex">Nb</div>
+                <div nrAtomico="73" class="elemento metal-trans flex">Ta</div>
+                <div nrAtomico="105" class="elemento metal-trans flex">Db</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="24" class="elemento metal-trans flex">Cr</div>
+                <div nrAtomico="42" class="elemento metal-trans flex">Mo</div>
+                <div nrAtomico="74" class="elemento metal-trans flex">W</div>
+                <div nrAtomico="106" class="elemento metal-trans flex">Sg</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="25" class="elemento metal-trans flex">Mn</div>
+                <div nrAtomico="43" class="elemento metal-trans flex">Tc</div>
+                <div nrAtomico="75" class="elemento metal-trans flex">Re</div>
+                <div nrAtomico="107" class="elemento metal-trans flex">Bh</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="26" class="elemento metal-trans flex">Fe</div>
+                <div nrAtomico="44" class="elemento metal-trans flex">Ru</div>
+                <div nrAtomico="76" class="elemento metal-trans flex">Os</div>
+                <div nrAtomico="108" class="elemento metal-trans flex">Hs</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="27" class="elemento metal-trans flex">Co</div>
+                <div nrAtomico="45" class="elemento metal-trans flex">Rh</div>
+                <div nrAtomico="77" class="elemento metal-trans flex">Ir</div>
+                <div nrAtomico="109" class="elemento metal-trans flex">Mt</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="28" class="elemento metal-trans flex">Ni</div>
+                <div nrAtomico="46" class="elemento metal-trans flex">Pd</div>
+                <div nrAtomico="78" class="elemento metal-trans flex">Pt</div>
+                <div nrAtomico="110" class="elemento metal-trans flex">Ds</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="29" class="elemento metal-trans flex">Cu</div>
+                <div nrAtomico="47" class="elemento metal-trans flex">Ag</div>
+                <div nrAtomico="79" class="elemento metal-trans flex">Au</div>
+                <div nrAtomico="111" class="elemento metal-trans flex">Rg</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="30" class="elemento metal-trans flex">Zn</div>
+                <div nrAtomico="48" class="elemento metal-trans flex">Cd</div>
+                <div nrAtomico="80" class="elemento metal-trans flex">Hg</div>
+                <div nrAtomico="112" class="elemento metal-trans flex">Cn</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="5" class="elemento semimetal flex">B</div>
+                <div nrAtomico="13" class="elemento outro-metal flex">Al</div>
+                <div nrAtomico="31" class="elemento outro-metal flex">Ga</div>
+                <div nrAtomico="49" class="elemento outro-metal flex">In</div>
+                <div nrAtomico="81" class="elemento outro-metal flex">Tl</div>
+                <div nrAtomico="113" class="elemento outro-metal flex">Nh</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="6" class="elemento n-metal flex">C</div>
+                <div nrAtomico="14" class="elemento semimetal flex">Si</div>
+                <div nrAtomico="32" class="elemento semimetal flex">Ge</div>
+                <div nrAtomico="50" class="elemento outro-metal flex">Sn</div>
+                <div nrAtomico="82" class="elemento outro-metal flex">Pb</div>
+                <div nrAtomico="114" class="elemento outro-metal flex">Fl</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="7" class="elemento n-metal flex">N</div>
+                <div nrAtomico="15" class="elemento n-metal flex">P</div>
+                <div nrAtomico="33" class="elemento semimetal flex">As</div>
+                <div nrAtomico="51" class="elemento semimetal flex">Sb</div>
+                <div nrAtomico="83" class="elemento outro-metal flex">Bi</div>
+                <div nrAtomico="115" class="elemento outro-metal flex">Mc</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="8" class="elemento n-metal flex">O</div>
+                <div nrAtomico="16" class="elemento n-metal flex">S</div>
+                <div nrAtomico="34" class="elemento n-metal flex">Se</div>
+                <div nrAtomico="52" class="elemento semimetal flex">Te</div>
+                <div nrAtomico="84" class="elemento semimetal flex">Po</div>
+                <div nrAtomico="116" class="elemento outro-metal flex">Lv</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="9" class="elemento halogenio flex">F</div>
+                <div nrAtomico="17" class="elemento halogenio flex">Cl</div>
+                <div nrAtomico="35" class="elemento halogenio flex">Br</div>
+                <div nrAtomico="53" class="elemento halogenio flex">I</div>
+                <div nrAtomico="85" class="elemento halogenio flex">At</div>
+                <div nrAtomico="117" class="elemento halogenio flex">Ts</div>
+            </div>
+
+            <div class="linha flex">
+                <div nrAtomico="2" class="elemento gas-nobre flex">He</div>
+                <div nrAtomico="10" class="elemento gas-nobre flex">Ne</div>
+                <div nrAtomico="18" class="elemento gas-nobre flex">Ar</div>
+                <div nrAtomico="36" class="elemento gas-nobre flex">Kr</div>
+                <div nrAtomico="54" class="elemento gas-nobre flex">Xe</div>
+                <div nrAtomico="86" class="elemento gas-nobre flex">Rn</div>
+                <div nrAtomico="118" class="elemento gas-nobre flex">Og</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
